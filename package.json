@@ -1,0 +1,22 @@
+{
+  "name": "socket-simulator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "engines": {
+    "node": "12.x"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shijin-p/socket-simulator.git"
+  },
+  "author": "shijin & ameen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shijin-p/socket-simulator/issues"
+  },
+  "homepage": "https://github.com/shijin-p/socket-simulator#readme"
+}
