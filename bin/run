@@ -58,7 +58,7 @@ if [[ $YES == $selection ]]; then
     \"timeout_interval\":$timeout_interval,
     \"imei\":\"$imei\"
 }" >> config/config_data_in.json
-    npm install
+    npm i --prod
     node src/app.js
 else
     echo "Exiting Bye."

@@ -15,8 +15,21 @@
   },
   "author": "shijin & ameen",
   "license": "ISC",
+  "standard": {
+    "globals": [
+      "include",
+      "__projectdir",
+      "fullPath",
+      "__rootdir"
+    ]
+  },
   "bugs": {
     "url": "https://github.com/shijin-p/socket-simulator/issues"
   },
-  "homepage": "https://github.com/shijin-p/socket-simulator#readme"
+  "homepage": "https://github.com/shijin-p/socket-simulator#readme",
+  "dependencies": {
+    "geolib": "^3.2.1",
+    "js-base64": "^2.5.1",
+    "moment-timezone": "^0.5.27"
+  }
 }
