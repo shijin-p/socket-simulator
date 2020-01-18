@@ -1,0 +1,65 @@
+#!/usr/bin/env bash
+
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
+
+#install modules - test packages
+cd $DIR/../
+
+echo 'Note: - Cntrl+C to cancel anytime. '
+echo 'Note: - Closing terminal will end the process or socket connection.'
+
+echo '
+###############################
+######    SIMULATOR    ########
+###############################
+status : running....
+
+Press <Enter> to take default value in setup
+'
+
+read -p "Enter IP  (default -> 127.0.0.1): " ip_address
+ip_address=${ip_address:-127.0.0.1}
+echo $ip_address
+
+read -p "Enter Port (default -> 9601)    : " port
+port=${port:-9601}
+echo $port
+
+read -p "Enter polling interval in milliseconds(default -> 10sec) (In millis, give 1000 for 1 seconds)   : " polling_interval
+polling_interval=${polling_interval:-10000}
+echo $polling_interval
+
+read -p "Enter timeout in seconds(default -> 60sec,    : " timeout_interval
+timeout_interval=${timeout_interval:-60}
+echo $timeout_interval
+
+read -p "Enter device imei(default -> 867482040788913)     : " imei
+imei=${imei:-867482040788913}
+echo $imei
+
+echo '....................................'
+echo 'Starting connection with below data'
+echo '....................................'
+echo 'ip_address        '$ip_address
+echo 'port              '$port
+echo 'polling_interval  '$polling_interval
+echo 'timeout_interval  '$timeout_interval
+echo 'imei              '$imei
+echo '....................................'
+
+YES="y"
+read -p "Start process...  [y/N]    : " selection
+if [[ $YES == $selection ]]; then
+   rm config/config_data_in.json
+   echo  "{
+    \"ip_address\":\"$ip_address\",
+    \"port\":$port,
+    \"polling_interval\":$polling_interval,
+    \"timeout_interval\":$timeout_interval,
+    \"imei\":\"$imei\"
+}" >> config/config_data_in.json
+    npm install
+    node src/app.js
+else
+    echo "Exiting Bye."
+fi

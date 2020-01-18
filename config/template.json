@@ -1,0 +1,7 @@
+{
+    "ip_address":"127.0.0.1",
+    "port":9601,
+    "polling_interval":10,
+    "timeout_interval":60,
+    "imei":"867482040788913"
+}
