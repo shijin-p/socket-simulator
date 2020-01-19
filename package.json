@@ -28,7 +28,7 @@
   },
   "homepage": "https://github.com/shijin-p/socket-simulator#readme",
   "dependencies": {
-    "geolib": "^3.2.1",
+    "geolib": "^2.0.24",
     "js-base64": "^2.5.1",
     "moment-timezone": "^0.5.27"
   }
