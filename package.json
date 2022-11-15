@@ -30,6 +30,6 @@
   "dependencies": {
     "geolib": "^2.0.24",
     "js-base64": "^2.5.1",
-    "moment-timezone": "^0.5.27"
+    "moment-timezone": "^0.5.35"
   }
 }
